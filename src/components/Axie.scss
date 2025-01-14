@@ -1,0 +1,17 @@
+.Axie {
+  background-color: orange;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 3;
+  .exit {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 4px 8px;
+    border: nonels;
+  }
+}

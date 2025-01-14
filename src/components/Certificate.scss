@@ -1,0 +1,51 @@
+.Certificate {
+  margin-bottom: 10vh;
+  .texts {
+    position: sticky;
+    top: 20vh;
+    margin-bottom: 20vh;
+    z-index: 0;
+    font-size: 24px;
+    span {
+      color: #c7a835;
+      font-size: 60px;
+    }
+  }
+  .certificate-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    .certificate-item {
+      position: sticky;
+      top: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &:nth-child(odd) {
+        flex-direction: row-reverse;
+        transform: rotate(-10deg);
+      }
+
+      &:nth-child(even) {
+        flex-direction: row;
+        transform: rotate(10deg);
+      }
+
+      &:nth-last-child(1) {
+        flex-direction: column;
+        transform: none;
+      }
+
+      img {
+        max-width: 600px;
+        height: auto;
+        border-radius: 2px;
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+}

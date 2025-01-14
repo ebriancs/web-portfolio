@@ -1,0 +1,47 @@
+.Header {
+  background-image: url('../assets/backgrounds/bg2.png');
+  height: 12vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  z-index: 3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  .left {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    span {
+      font-size: 24px;
+      font-weight: bolder;
+      color: #c7a835;
+      sub {
+        font-size: 12px;
+        margin-left: 10px;
+      }
+      sup {
+        font-size: 12px;
+      }
+    }
+  }
+  .right {
+    flex: 1;
+    ul {
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+      margin: 0 20px 0 0;
+      padding: 0;
+      li {
+        margin: 0 20px;
+        transition: color 0.3s;
+        color: #c5c0c8;
+        &:hover {
+          color: #c7a835;
+          transform: translateY(-5px);
+        }
+      }
+    }
+  }
+}

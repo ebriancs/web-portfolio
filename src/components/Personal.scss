@@ -1,0 +1,105 @@
+.Personal {
+  margin-bottom: 10vh;
+  .texts-container {
+    font-size: 24px;
+    span {
+      color: #c7a835;
+      font-size: 60px;
+    }
+  }
+
+  .container-a {
+    display: flex;
+    min-height: 100vh;
+
+    .group {
+      flex: 1;
+      margin-top: auto;
+      margin-bottom: auto;
+      padding: 10px;
+
+      .group-content {
+        width: 100%;
+        height: auto;
+        margin: auto;
+        padding: 12px;
+        position: sticky;
+        top: 40vh;
+        border-top: 4px solid #c7a736;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
+
+        .web3 {
+          a {
+            color: #c7a736;
+            text-decoration: none;
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+
+        .music {
+          .video-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            iframe {
+              border: none;
+              border-radius: 8px;
+              box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.9);
+              opacity: 0.9;
+            }
+          }
+        }
+
+        .gallery {
+          .images-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+              width: auto;
+              height: 250px;
+              border-radius: 8px;
+              box-shadow: 0px 4px 100px rgba(0, 0, 0, 0.9);
+              opacity: 0.9;
+            }
+          }
+        }
+
+        .web3,
+        .cyberSec,
+        .repair,
+        .music,
+        .gallery {
+          text-align: justify;
+        }
+
+        i {
+          margin-top: 8px;
+
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+
+      &:nth-child(1) {
+        height: 125vh;
+      }
+      &:nth-child(2) {
+        height: 100vh;
+      }
+      &:nth-child(3) {
+        height: 75vh;
+      }
+      &:nth-child(4) {
+        height: 50vh;
+      }
+      &:nth-child(5) {
+        height: 25vh;
+      }
+    }
+  }
+}

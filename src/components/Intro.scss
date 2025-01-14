@@ -1,0 +1,23 @@
+.Intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  z-index: 2;
+
+  .intro-container {
+    position: sticky;
+    top: 15vh;
+    width: 60%;
+    margin-left: 5%;
+    margin-right: auto;
+    .texts {
+      font-size: 24px;
+      span {
+        color: #c7a835;
+        font-size: 60px;
+      }
+    }
+  }
+}

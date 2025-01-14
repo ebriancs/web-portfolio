@@ -1,0 +1,36 @@
+.Footer {
+  background-color: #272228;
+  background-image: url("../assets/backgrounds/bg2.png");
+  height: 60vh;
+  width: 100%;
+  margin: auto;
+  position: relative;
+
+  .outro {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .socialmedia-container {
+    margin-top: 200px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+
+    i {
+      font-size: 2.5rem;
+      color: whitesmoke;
+      opacity: 0.4;
+      transition: color 0.3s, transform 0.3s;
+
+      &:hover {
+        color: #0077b5;
+        opacity: 0.8;
+        transform: scale(1.2);
+      }
+    }
+  }
+}
