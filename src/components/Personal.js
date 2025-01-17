@@ -5,23 +5,21 @@ const WEB3 = () => {
   return (
     <div className="web3">
       <p>
-        I'm a WEB3 enthusiast actively exploring the decentralized ecosystem. I
-        trade cryptocurrencies with a modest capital to refine my analysis
-        skills and strategies. Beyond trading, I engage in buying, selling, and
-        playing Axies. I also stake tokens and NFTs to earn rewards and
-        participate in airdrops.
+        I'm a WEB3 enthusiast exploring the decentralized ecosystem. I trade
+        cryptocurrencies with modest capital to improve my analysis and
+        strategies. I also buy, sell, and play Axies, stake tokens and NFTs for
+        rewards, and join airdrops.
       </p>
       <p>
-        Feel free to check out my inventory if you're interested in buying:
-        <br />
+        Check out my{" "}
         <a
           href="https://app.axieinfinity.com/profile/0x516a61a105694a184538e8f2ab7747def7b165a2/"
           target="_blank"
           rel="noopener noreferrer"
         >
           Inventory
-        </a>
-        .
+        </a>{" "}
+        if you're interested in buying.
       </p>
     </div>
   );
@@ -31,14 +29,15 @@ const Cybersec = () => {
   return (
     <div className="cyberSec">
       <p>
-        Cybersecurity is a passion of mine and my "shadow career." I've always
-        been intrigued by hacking, in all its forms, whether it's white, black,
-        or gray hat. While my current path as a developer offers broader
-        opportunities, I still find the world of cybersecurity fascinating.
-        Although I can't dedicate myself fully to hacking right now, I know that
-        being a skilled programmer is a crucial step towards becoming a
-        proficient hacker. Who knows what the future holds? Life has a way of
-        shaping our paths, and I'm curious to see where mine leads.
+        Cybersecurity is a passion of mine and a "shadow career." I've always
+        been intrigued by the art of hacking in all its forms. While my current
+        path as a developer offers broader opportunities, I still find the world
+        of cybersecurity fascinating. Although I can't commit myself fully to
+        hacking right now, I know that being a skilled programmer is crucial to
+        becoming a proficient hacker.
+        <br />
+        <br />
+        Who knows what the future holds? I'm curious to see where mine leads.
       </p>
     </div>
   );
@@ -48,13 +47,11 @@ const Repair = () => {
   return (
     <div className="repair">
       <p>
-        Repairing devices, like phones, is something I want to explore as part
-        of my interest in technology. While it’s not the prior of my career, I
-        enjoy learning how things work and troubleshooting to fix them. I know
-        repair can be challenging, especially with the cost of tools and
-        components, but the satisfaction after successfully repairing something
-        makes it all worthwhile. It’s a valuable skill that complements my
-        passion for tech.
+        Repairing devices is something I want to explore as part of my interest
+        in technology. While it’s not a priority in my career, I enjoy learning
+        how things work and troubleshooting to fix them. Repair can be
+        challenging due to the cost of tools and parts, but the satisfaction
+        after a successful repair makes it all worthwhile.
       </p>
     </div>
   );
@@ -68,11 +65,15 @@ const Music = () => {
         to specific notes and how keys play a crucial role in playing
         instruments and singing.
         <br />
-        <br />I truly believe in the healing power of music, not just
-        emotionally, but even scientifically. As Nikola Tesla once suggested,
-        "If you want to understand the universe, think in terms of frequency,
-        vibration, and energy."
+        <br />I believe music has the power to heal, not just emotionally, but
+        even scientifically.{" "}
+        <q>
+          If you want to understand the universe, think in terms of frequency,
+          vibration, and energy.
+        </q>{" "}
+        - Nikola Tesla
       </p>
+
       <div className="video-container">
         <iframe
           src="https://drive.google.com/file/d/1mEMgX2jz2y-QZZ-d80KCFhAKimICy350/preview"
@@ -114,8 +115,8 @@ const Gallery = () => {
     <div className="gallery">
       <p>
         This is a collection of me. While I’m usually hesitant to share photos
-        or content, knowing that only those genuinely visited this site will see
-        it gives me confidence. <b>Thanks!</b>
+        or content, but knowing that only those genuinely visit this site will
+        see it gives me confidence.
       </p>
 
       <div className="images-container">

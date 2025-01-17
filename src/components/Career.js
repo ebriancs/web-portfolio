@@ -70,8 +70,8 @@ function Career() {
   return (
     <div className="Career" id="career">
       <div className="texts">
-        This is about my <span>CAREER, </span> here are some information about
-        my work experience.
+        This is about my <span>CAREER, </span> here is some information about my
+        work experience.
       </div>
 
       <div className="ilgu-career">
@@ -113,12 +113,12 @@ function Career() {
               </h4>
               <p>
                 I began my professional career with One Document Corporation,
-                where my role is a system developer and implementor for the City
-                Government of Lipa. I've been involved working on a online
-                web-based application built using Python Django and VueJS. I
-                joined the project as a junior team member and soon advanced to
-                become the main developer of the online web-based application
-                project for LGU.
+                where my role was as a full-stack developer and system
+                implementor for the City Government of Lipa. I was involved in
+                working on an online web-based application built using Python
+                Django and VueJS. I joined the project as a junior team member
+                and soon advanced to become the main developer of the online
+                web-based application project for the LGU.
                 <h4>Key Contributions:</h4>
                 <ul>
                   <li>

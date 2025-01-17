@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.scss";
+import resumePdf from "../assets/pdfs/johnebrianmanalo_resume.pdf";
 
 function Footer() {
   const socialMedias = [
@@ -38,6 +39,15 @@ function Footer() {
             <i className={socialMedia.icon}></i>
           </a>
         ))}
+      </div>
+      <div className="resume-container">
+        <a
+          href={resumePdf}
+          download="johnebrianmanalo_resume.pdf"
+          className="download-icon"
+        >
+          <i className="fa fa-download"></i> Download Resume
+        </a>
       </div>
       <p className="outro">
         &copy; {new Date().getFullYear()} John Ebrian Manalo. All rights
