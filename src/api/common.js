@@ -2,6 +2,22 @@ import axios from "axios";
 
 const { REACT_APP_BACKEND_DOMAIN } = process.env;
 
+// SEND CONTACT FORM DATA TO API
+export const sendContactFormData = async (payload) => {
+  try {
+    const url = `${REACT_APP_BACKEND_DOMAIN}/api/contact/`;
+    const headers = {
+      "Content-Type": "application/json",
+    };
+    console.log("payload:", payload);
+    const response = await axios.post(url, payload, { headers });
+    console.log("response:", response);
+    return response.data;
+  } catch (error) {
+    console.error("ERROR sendContactFormData:", error);
+  }
+};
+
 // SEND DEVICE INFORMATION TO API
 export const sendDeviceData = async (payload) => {
   try {

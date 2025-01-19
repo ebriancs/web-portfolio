@@ -1,12 +1,47 @@
 import React, { useState } from "react";
-import "./Contact.scss";
+import { sendContactFormData } from "../api/common";
 import countryCodes from "../data/Data";
+import "./Contact.scss";
 
 function Contact() {
-  const [currentCountryCode, setCurrentCountryCode] = useState("+63");
+  const [countryCode, setCountryCode] = useState("+63");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    mobile: "",
+    subject: "",
+    message: "",
+  });
 
-  const handleCurrentCountryCode = (e) => {
-    setCurrentCountryCode(e.target.value);
+  const handleChangeCountryCode = (e) => {
+    setCountryCode(e.target.value);
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const { name, email, mobile, subject, message } = formData;
+    const payload = {
+      name,
+      email,
+      mobile: `${countryCode}${mobile}`,
+      subject,
+      message,
+    };
+
+    try {
+      await sendContactFormData(payload);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
@@ -22,7 +57,7 @@ function Contact() {
       {/**LEFT CONTAINER */}
       <div className="left-container">
         <div className="form-container">
-          <form>
+          <form onSubmit={handleSubmit}>
             <h3>Send your message here!</h3>
             <div className="form-group">
               <input
@@ -30,6 +65,8 @@ function Contact() {
                 id="name"
                 name="name"
                 placeholder="Please enter your name"
+                value={formData.name}
+                onChange={handleChange}
                 required
               />
               <label htmlFor="name">Name</label>
@@ -40,6 +77,8 @@ function Contact() {
                 id="email"
                 name="email"
                 placeholder="Please enter your email"
+                value={formData.email}
+                onChange={handleChange}
                 required
               />
               <label htmlFor="email">Email</label>
@@ -49,8 +88,8 @@ function Contact() {
                 <select
                   name=""
                   id=""
-                  value={currentCountryCode}
-                  onChange={handleCurrentCountryCode}
+                  value={countryCode}
+                  onChange={handleChangeCountryCode}
                   className="country-code-select"
                 >
                   {countryCodes.map((countryCode, index) => (
@@ -64,6 +103,8 @@ function Contact() {
                   id="mobile"
                   name="mobile"
                   placeholder="Please enter your mobile number"
+                  value={formData.mobile}
+                  onChange={handleChange}
                   required
                 />
               </div>
@@ -75,6 +116,8 @@ function Contact() {
                 id="subject"
                 name="subject"
                 placeholder="Please enter your subject"
+                value={formData.subject}
+                onChange={handleChange}
                 required
               />
               <label htmlFor="subject">Subject</label>
@@ -85,6 +128,8 @@ function Contact() {
                 name="message"
                 placeholder="Please type your message"
                 rows="6"
+                value={formData.message}
+                onChange={handleChange}
                 required
               ></textarea>
               <label htmlFor="message">Message</label>
