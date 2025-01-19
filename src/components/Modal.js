@@ -4,13 +4,13 @@ import { isScreenDimensionOK } from "../utils/isScreenDimensionOK";
 import "./Modal.scss";
 
 export const Warning = ({ title, message, btnText }) => {
-  const [visible, setVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(true);
 
   const handleCloseModal = () => {
-    setVisible(false);
+    setIsVisible(false);
   };
 
-  if (!visible) return null;
+  if (!isVisible) return null;
 
   return (
     <div className="Modal Warning">

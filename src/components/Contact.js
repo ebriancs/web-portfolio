@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { sendContactFormData } from "../api/common";
+import { toast, Toaster } from "react-hot-toast";
 import countryCodes from "../data/Data";
 import "./Contact.scss";
 
@@ -38,14 +39,20 @@ function Contact() {
     };
 
     try {
-      await sendContactFormData(payload);
+      const response = await sendContactFormData(payload);
+      toast.success(response.data.message, {
+        duration: 3000,
+      });
     } catch (error) {
       console.error(error);
+      toast.error("Failed to send message. Please try again.");
     }
   };
 
   return (
     <div className="Contact" id="contact">
+      {/**TOASTER */}
+      <Toaster position="top-right" reverseOrder={false} />
       {/**RIGHT CONTAINER */}
       <div className="right-container">
         <div className="texts-container">

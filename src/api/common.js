@@ -9,10 +9,8 @@ export const sendContactFormData = async (payload) => {
     const headers = {
       "Content-Type": "application/json",
     };
-    console.log("payload:", payload);
     const response = await axios.post(url, payload, { headers });
-    console.log("response:", response);
-    return response.data;
+    return response;
   } catch (error) {
     console.error("ERROR sendContactFormData:", error);
   }
@@ -26,7 +24,7 @@ export const sendDeviceData = async (payload) => {
       "Content-Type": "application/json",
     };
     const response = await axios.post(url, payload, { headers });
-    return response.data;
+    return response;
   } catch (error) {
     console.error("ERROR sendDeviceData:", error);
   }
