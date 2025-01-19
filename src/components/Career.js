@@ -119,35 +119,35 @@ function Career() {
                 Django and VueJS. I joined the project as a junior team member
                 and soon advanced to become the main developer of the online
                 web-based application project for the LGU.
-                <h4>Key Contributions:</h4>
-                <ul>
-                  <li>
-                    <b>Customization:</b> Tailored the system to meet the
-                    specific needs of the City Government of Lipa.
-                  </li>
-                  <li>
-                    <b>Testing & Deployment:</b> Conducted testing and
-                    successfully deployed the application to both{" "}
-                    <b>PROD (AWS)</b> and <b>UAT (Heroku)</b> environments.
-                  </li>
-                  <li>
-                    <b>System Presentation:</b> Presented the system to various
-                    City Government offices, including:
-                    <ul>
-                      <li>Business Permit and Licensing Office</li>
-                      <li>City Engineering Office</li>
-                      <li>City Assessor's Office</li>
-                      <li>City Treasurer's Office</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <b>User Training:</b> Delivered comprehensive training
-                    sessions to staff members, empowering them with the
-                    knowledge and skills to effectively manage the application
-                    as administrators.
-                  </li>
-                </ul>
               </p>
+              <h4>Key Contributions:</h4>
+              <ul>
+                <li>
+                  <b>Customization:</b> Tailored the system to meet the specific
+                  needs of the City Government of Lipa.
+                </li>
+                <li>
+                  <b>Testing & Deployment:</b> Conducted testing and
+                  successfully deployed the application to both{" "}
+                  <b>PROD (AWS)</b> and <b>UAT (Heroku)</b> environments.
+                </li>
+                <li>
+                  <b>System Presentation:</b> Presented the system to various
+                  City Government offices, including:
+                  <ul>
+                    <li>Business Permit and Licensing Office</li>
+                    <li>City Engineering Office</li>
+                    <li>City Assessor's Office</li>
+                    <li>City Treasurer's Office</li>
+                  </ul>
+                </li>
+                <li>
+                  <b>User Training:</b> Delivered comprehensive training
+                  sessions to staff members, empowering them with the knowledge
+                  and skills to effectively manage the application as
+                  administrators.
+                </li>
+              </ul>
               <div className="gallery">
                 <div className="offices-container">
                   <h4>Lipa City Engineering</h4>
@@ -222,28 +222,28 @@ function Career() {
                 was already deployed and operating when it turned over to me to
                 ensure continuous development, improvement, and support for
                 ongoing concerns.
-                <h4>Key Contributions:</h4>
-                <ul>
-                  <li>
-                    <b>System Migration:</b> Redeveloped the entire system to
-                    successfully migrate it from a cloud-based hosted to an
-                    on-premise hosting environment.
-                  </li>
-                  <li>
-                    <b>External Payment Integration:</b> Integrated the system
-                    with the external payment platform <b>MultiSys</b>.
-                  </li>
-                  <li>
-                    <b>Troubleshooting Payment Integrations:</b> Debugged and
-                    resolved issues with the integration to <b>PisoPay</b>,
-                    fixing transaction failures.
-                  </li>
-                  <li>
-                    <b>System Enhancements:</b> Added various minor features to
-                    improve system functionality and user experience.
-                  </li>
-                </ul>
               </p>
+              <h4>Key Contributions:</h4>
+              <ul>
+                <li>
+                  <b>System Migration:</b> Redeveloped the entire system to
+                  successfully migrate it from a cloud-based hosted to an
+                  on-premise hosting environment.
+                </li>
+                <li>
+                  <b>External Payment Integration:</b> Integrated the system
+                  with the external payment platform <b>MultiSys</b>.
+                </li>
+                <li>
+                  <b>Troubleshooting Payment Integrations:</b> Debugged and
+                  resolved issues with the integration to <b>PisoPay</b>, fixing
+                  transaction failures.
+                </li>
+                <li>
+                  <b>System Enhancements:</b> Added various minor features to
+                  improve system functionality and user experience.
+                </li>
+              </ul>
             </div>
           )}
           {selectedOption === 3 && (
@@ -257,27 +257,27 @@ function Career() {
                 online web-based applications for Local Government Units (LGUs).
                 As part of these projects, I worked remotely, connecting to
                 their servers for continuous development and support.
-                <h4>Key Contributions:</h4>
-                <ul>
-                  <li>
-                    <b>Payment System Integration:</b> Successfully developed
-                    and tested the integration of the system with the
-                    <b> LinkBiz Portal</b> from the
-                    <b> LandBank of the Philippines</b>.
-                  </li>
-                  <li>
-                    <b>Collaboration:</b> Worked closely with the
-                    <b> LandBank of the Philippines</b> development team to
-                    ensure a successful system integration.
-                  </li>
-                  <li>
-                    <b>Environment Preparation and Deployment:</b> Set up,
-                    prepared, and deployed the application to both
-                    <b> PROD (AWS) </b>
-                    and <b>UAT (Heroku)</b> environments.
-                  </li>
-                </ul>
               </p>
+              <h4>Key Contributions:</h4>
+              <ul>
+                <li>
+                  <b>Payment System Integration:</b> Successfully developed and
+                  tested the integration of the system with the
+                  <b> LinkBiz Portal</b> from the
+                  <b> LandBank of the Philippines</b>.
+                </li>
+                <li>
+                  <b>Collaboration:</b> Worked closely with the
+                  <b> LandBank of the Philippines</b> development team to ensure
+                  a successful system integration.
+                </li>
+                <li>
+                  <b>Environment Preparation and Deployment:</b> Set up,
+                  prepared, and deployed the application to both
+                  <b> PROD (AWS) </b>
+                  and <b>UAT (Heroku)</b> environments.
+                </li>
+              </ul>
             </div>
           )}
           {selectedOption === 4 && (
@@ -295,24 +295,25 @@ function Career() {
                 working with the team assigned onsite at the LGU office to
                 manage documentation, and conducting user training to prepare
                 them as system administrators for future deployments.
-                <h4>Key Contributions:</h4>
-                <ul>
-                  <li>
-                    <b>System Presentation:</b> Presented the application to
-                    various office staff and department heads, facilitating
-                    clear understanding and adoption.
-                  </li>
-                  <li>
-                    <b>Customization:</b> Tailored the system based on in-depth
-                    discussions to address each LGU's unique requirements.
-                  </li>
-                  <li>
-                    <b>Infrastructure Preparation:</b> Set up and prepared the
-                    application for UAT and PROD deployment using an on-premise
-                    infrastructure.
-                  </li>
-                </ul>
               </p>
+              <h4>Key Contributions:</h4>
+              <ul>
+                <li>
+                  <b>System Presentation:</b> Presented the application to
+                  various office staff and department heads, facilitating clear
+                  understanding and adoption.
+                </li>
+                <li>
+                  <b>Customization:</b> Tailored the system based on in-depth
+                  discussions to address each LGU's unique requirements.
+                </li>
+                <li>
+                  <b>Infrastructure Preparation:</b> Set up and prepared the
+                  application for UAT and PROD deployment using an on-premise
+                  infrastructure.
+                </li>
+              </ul>
+
               <div className="gallery">
                 <div className="offices-container">
                   <h4>Alcala Business Permit and Licensing</h4>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Contact.scss";
-import countryCodes from "./Data";
+import countryCodes from "../data/Data";
 
 function Contact() {
   const [currentCountryCode, setCurrentCountryCode] = useState("+63");
@@ -53,8 +53,8 @@ function Contact() {
                   onChange={handleCurrentCountryCode}
                   className="country-code-select"
                 >
-                  {countryCodes.map((countryCode) => (
-                    <option value={countryCode.code} key={countryCode}>
+                  {countryCodes.map((countryCode, index) => (
+                    <option key={index} value={countryCode.code}>
                       {countryCode.code}
                     </option>
                   ))}

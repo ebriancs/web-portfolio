@@ -1,17 +1,20 @@
 import axios from "axios";
 
+const { REACT_APP_BACKEND_DOMAIN } = process.env;
+
 // SEND DEVICE INFORMATION TO API
 export const sendDeviceData = async (payload) => {
   try {
-    const url = "";
+    const url = `${REACT_APP_BACKEND_DOMAIN}/api/device-info/`;
     const headers = {
       "Content-Type": "application/json",
     };
-    const response = await axios.post(url, payload, headers);
-
+    console.log("payload: ", payload);
+    const response = await axios.post(url, payload, { headers });
+    console.log("response: ", response);
     return response.data;
   } catch (error) {
-    console.error("ERROR sendDeviceData: ", error);
+    console.error("ERROR sendDeviceData:", error);
   }
 };
 
@@ -24,6 +27,6 @@ export const getUserPublicIP = async () => {
 
     return ip;
   } catch (error) {
-    console.error("ERROR getUserPublicIP: ", error);
+    console.error("ERROR getUserPublicIP:", error);
   }
 };

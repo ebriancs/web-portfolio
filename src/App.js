@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import "./App.scss";
 import { GlobalProvider } from "./components/Global";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -12,11 +11,20 @@ import Intro from "./components/Intro";
 import Skill from "./components/Skill";
 import Warning from "./components/Warning";
 import { getDeviceInfo } from "./utils/getDeviceInfo";
+import { sendDeviceData } from "./api/common";
+import "./App.scss";
 
 function App() {
   useEffect(() => {
-    const deviceInfo = getDeviceInfo();
-    console.log("deviceInfo: ", deviceInfo);
+    const fetchDeviceInfo = async () => {
+      try {
+        const deviceInfo = await getDeviceInfo();
+        await sendDeviceData(deviceInfo);
+      } catch (error) {
+        console.error("ERROR fetchDeviceInfo:", error);
+      }
+    };
+    fetchDeviceInfo();
   }, []);
 
   return (

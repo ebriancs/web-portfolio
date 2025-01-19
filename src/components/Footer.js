@@ -34,8 +34,13 @@ function Footer() {
   return (
     <footer className="Footer">
       <div className="socialmedia-container">
-        {socialMedias.map((socialMedia) => (
-          <a href={socialMedia.url} target="_blank" rel="noopener noreferrer">
+        {socialMedias.map((socialMedia, index) => (
+          <a
+            key={index}
+            href={socialMedia.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className={socialMedia.icon}></i>
           </a>
         ))}

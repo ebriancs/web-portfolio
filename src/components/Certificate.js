@@ -34,10 +34,8 @@ function Certificate() {
             rotateValue = "none";
           } else if (isOdd) {
             rotateValue = `rotate(${-10 - Math.floor(index / 2) * 3}deg)`;
-            console.log(`isOdd: ${rotateValue}`);
           } else if (isEven) {
             rotateValue = `rotate(${10 + Math.floor(index / 2) * 3}deg)`;
-            console.log(`isEven: ${rotateValue}`);
           }
 
           return (

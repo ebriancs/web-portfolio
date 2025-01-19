@@ -8,7 +8,7 @@ export const getDeviceInfo = async () => {
     const language = navigator.language;
 
     // GET USER PUBLIC IP
-    const ip = getUserPublicIP();
+    const ip = await getUserPublicIP();
 
     return {
       userAgent,

@@ -144,7 +144,10 @@ function Personal() {
       title: "Music",
       data: <Music />,
     },
-    { title: "Gallery", data: <Gallery /> },
+    {
+      title: "Gallery",
+      data: <Gallery />,
+    },
   ];
 
   return (
@@ -155,7 +158,7 @@ function Personal() {
 
       <div className="container-a">
         {contents.map((content, index) => (
-          <div className="group">
+          <div className="group" key={index}>
             <div className="group-content">
               <h4>{content.title}</h4>
 
