@@ -9,9 +9,7 @@ export const sendDeviceData = async (payload) => {
     const headers = {
       "Content-Type": "application/json",
     };
-    console.log("payload: ", payload);
     const response = await axios.post(url, payload, { headers });
-    console.log("response: ", response);
     return response.data;
   } catch (error) {
     console.error("ERROR sendDeviceData:", error);

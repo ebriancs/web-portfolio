@@ -9,7 +9,7 @@ import Personal from "./components/Personal";
 import Contact from "./components/Contact";
 import Intro from "./components/Intro";
 import Skill from "./components/Skill";
-import Warning from "./components/Warning";
+import { Warning, ScreenWarning } from "./components/Modal";
 import { getDeviceInfo } from "./utils/getDeviceInfo";
 import { sendDeviceData } from "./api/common";
 import "./App.scss";
@@ -30,7 +30,20 @@ function App() {
   return (
     <GlobalProvider>
       <div className="App">
-        <Warning />
+        <Warning
+          title="Website Under Construction"
+          message="I'm working hard to bring this site to life.
+                   This is a work in progress. Please click OK to continue browsing."
+          btnText="OK"
+        />
+        <ScreenWarning
+          minWidth={1024}
+          minHeight={600}
+          title="Screen Size Warning"
+          message="I'm working hard to bring this site to life.
+                   For best experience, please use a larger screen. Avoid using mobile
+                   devices for now."
+        />
         <Header />
         <main className="main-container">
           <Intro />
