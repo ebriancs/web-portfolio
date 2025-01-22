@@ -6,6 +6,7 @@ import "./Contact.scss";
 
 function Contact() {
   const [countryCode, setCountryCode] = useState("+63");
+  const [lastSubmitTime, setLastSubmitTime] = useState(0);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -29,6 +30,15 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const currentTime = Date.now();
+    if (currentTime - lastSubmitTime < 5000) {
+      console.log(currentTime - lastSubmitTime);
+      toast.error("Please wait a moment before submitting again.", {
+        duration: 3000,
+      });
+      return;
+    }
+
     const { name, email, mobile, subject, message } = formData;
     const payload = {
       name,
@@ -43,6 +53,7 @@ function Contact() {
       toast.success(response.data.message, {
         duration: 3000,
       });
+      setLastSubmitTime(currentTime)
     } catch (error) {
       console.error(error);
       toast.error("Failed to send message. Please try again.");
