@@ -21,11 +21,7 @@
     width: calc(50% - 10px);
     margin-left: 10px;
     .form-container {
-      position: relative;
       form {
-        position: absolute;
-        top: 60px;
-        right: 0;
         z-index: 2;
         background-image: url("../assets/backgrounds/bg4.png");
         color: #44312b;
@@ -34,6 +30,7 @@
         flex-direction: column;
         padding: 20px;
         margin-left: auto;
+        margin-bottom: 20px;
         border-radius: 4px;
         box-sizing: border-box;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
@@ -65,7 +62,6 @@
             background-color: transparent;
             color: #44312b;
           }
-          // Placeholder text hides when the input is focused or contains text
           input::placeholder,
           textarea::placeholder {
             opacity: 1;
@@ -81,7 +77,6 @@
             transition: all 0.2s ease;
             opacity: 0;
           }
-          // When the input is focused or has a value, the label moves to the top
           input:focus + label,
           input:not(:placeholder-shown) + label,
           textarea:focus + label,
@@ -93,7 +88,6 @@
             font-size: 12px;
             opacity: 1;
           }
-          // When input is focused or has value, hide the placeholder text
           input:focus::placeholder,
           textarea:focus::placeholder {
             opacity: 0;
