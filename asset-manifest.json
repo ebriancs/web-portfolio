@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/web-portfolio/static/css/main.bd2e6bc7.css",
-    "main.js": "/web-portfolio/static/js/main.ab020faf.js",
+    "main.js": "/web-portfolio/static/js/main.e6a6c62f.js",
     "static/js/453.d855a71b.chunk.js": "/web-portfolio/static/js/453.d855a71b.chunk.js",
     "static/media/img1.jpg": "/web-portfolio/static/media/img1.27095927835544b2d28b.jpg",
     "static/media/img2.jpg": "/web-portfolio/static/media/img2.e8a306e225470ecd6bf4.jpg",
@@ -12,10 +12,14 @@
     "static/media/bg.png": "/web-portfolio/static/media/bg.34b3aa0fcfae406ed0cc.png",
     "static/media/img8.jpg": "/web-portfolio/static/media/img8.fc45f4cdf2efff5766cc.jpg",
     "static/media/img5.jpg": "/web-portfolio/static/media/img5.41736ca621295e328d6d.jpg",
+    "static/media/img12.jpg": "/web-portfolio/static/media/img12.a006f827f8d598ca103d.jpg",
+    "static/media/img13.jpg": "/web-portfolio/static/media/img13.9a6c524e2e9d4964ac61.jpg",
     "static/media/img7.jpg": "/web-portfolio/static/media/img7.bcd749d31ac48a2baed3.jpg",
+    "static/media/img15.jpg": "/web-portfolio/static/media/img15.a9a749f04e293ff7d29a.jpg",
     "static/media/img4.jpg": "/web-portfolio/static/media/img4.b1fba60cec4494024bbd.jpg",
     "static/media/img6.jpg": "/web-portfolio/static/media/img6.797f1220334c6ccff974.jpg",
     "static/media/img11.jpg": "/web-portfolio/static/media/img11.6547076bbdbd9ef9ab29.jpg",
+    "static/media/img14.jpg": "/web-portfolio/static/media/img14.4c51c397e33f71a84753.jpg",
     "static/media/img9.jpg": "/web-portfolio/static/media/img9.4739022c326ddd4fa1e9.jpg",
     "static/media/img10.jpg": "/web-portfolio/static/media/img10.ad60682224d365a0335d.jpg",
     "static/media/the_great_hackathon.jpg": "/web-portfolio/static/media/the_great_hackathon.dc847e2051407389edb0.jpg",
@@ -51,11 +55,11 @@
     "static/media/fa-v4compatibility.woff2": "/web-portfolio/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
     "index.html": "/web-portfolio/index.html",
     "main.bd2e6bc7.css.map": "/web-portfolio/static/css/main.bd2e6bc7.css.map",
-    "main.ab020faf.js.map": "/web-portfolio/static/js/main.ab020faf.js.map",
+    "main.e6a6c62f.js.map": "/web-portfolio/static/js/main.e6a6c62f.js.map",
     "453.d855a71b.chunk.js.map": "/web-portfolio/static/js/453.d855a71b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bd2e6bc7.css",
-    "static/js/main.ab020faf.js"
+    "static/js/main.e6a6c62f.js"
   ]
 }
