@@ -66,12 +66,7 @@ const Music = () => {
         instruments and singing.
         <br />
         <br />I believe music has the power to heal, not just emotionally, but
-        even scientifically.{" "}
-        <q>
-          If you want to understand the universe, think in terms of frequency,
-          vibration, and energy.
-        </q>{" "}
-        - Nikola Tesla
+        even scientifically.
       </p>
 
       <div className="video-container">
@@ -87,6 +82,11 @@ const Music = () => {
       <p>
         Music connects us to those universal principles, making it both an art
         and a science.
+        <br />
+        <br />
+        <div className="nikola-tesla-qoute">
+          <q>Frequency, vibration, and energy</q> - Nikola Tesla
+        </div>
       </p>
     </div>
   );
