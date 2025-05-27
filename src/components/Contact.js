@@ -1,19 +1,37 @@
-import React, { useState } from "react";
-import { sendContactFormData } from "../api/common";
-import { toast, Toaster } from "react-hot-toast";
-import countryCodes from "../data/Data";
-import "./Contact.scss";
+import React, { useState } from 'react';
+import { sendContactFormData } from '../api/common';
+import { toast, Toaster } from 'react-hot-toast';
+import emailjs from '@emailjs/browser';
+import countryCodes from '../data/Data';
+import './Contact.scss';
 
 function Contact() {
-  const [countryCode, setCountryCode] = useState("+63");
+  const [countryCode, setCountryCode] = useState('+63');
   const [lastSubmitTime, setLastSubmitTime] = useState(0);
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    mobile: "",
-    subject: "",
-    message: "",
+    name: '',
+    email: '',
+    mobile: '',
+    subject: '',
+    message: '',
   });
+
+  const sendEmail = async () => {
+    const { name, email, mobile, subject, message } = formData;
+    return emailjs.send(
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID_CONTACT,
+      {
+        from_name: name,
+        from_email: email,
+        phone: `${countryCode}${mobile}`,
+        subject: subject,
+        message: message,
+        time: new Date().toLocaleString(),
+      },
+      process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+    );
+  };
 
   const handleChangeCountryCode = (e) => {
     setCountryCode(e.target.value);
@@ -33,7 +51,7 @@ function Contact() {
     const currentTime = Date.now();
     if (currentTime - lastSubmitTime < 5000) {
       console.log(currentTime - lastSubmitTime);
-      toast.error("Please wait a moment before submitting again.", {
+      toast.error('Please wait a moment before submitting again.', {
         duration: 3000,
       });
       return;
@@ -53,11 +71,20 @@ function Contact() {
       toast.success(response.data.message, {
         duration: 3000,
       });
-      setLastSubmitTime(currentTime)
     } catch (error) {
       console.error(error);
-      toast.error("Failed to send message. Please try again.");
+      toast.error('Failed to send message. Please try again.');
     }
+
+    try {
+      const response = await sendEmail();
+      console.log('EmailJS response:', response);
+    } catch (error) {
+      console.error('EmailJS send error:', error);
+      toast.error('Failed to send email notification.');
+    }
+
+    setLastSubmitTime(currentTime);
   };
 
   return (
@@ -67,8 +94,7 @@ function Contact() {
       {/**RIGHT CONTAINER */}
       <div className="right-container">
         <div className="texts-container">
-          <span>CONTACT, </span>if you have any inquiries, don't hesitate to
-          reach out. Feel free to send me a message anytime, and I'll respond as
+          <span>CONTACT, </span>if you have any inquiries, don't hesitate to reach out. Feel free to send me a message anytime, and I'll respond as
           quickly as possible.
         </div>
       </div>
@@ -78,15 +104,7 @@ function Contact() {
           <form onSubmit={handleSubmit}>
             <h3>Send your message here!</h3>
             <div className="form-group">
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Please enter your name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-              />
+              <input type="text" id="name" name="name" placeholder="Please enter your name" value={formData.name} onChange={handleChange} required />
               <label htmlFor="name">Name</label>
             </div>
             <div className="form-group">
@@ -103,13 +121,7 @@ function Contact() {
             </div>
             <div className="form-group">
               <div className="mobile-input-container">
-                <select
-                  name=""
-                  id=""
-                  value={countryCode}
-                  onChange={handleChangeCountryCode}
-                  className="country-code-select"
-                >
+                <select name="" id="" value={countryCode} onChange={handleChangeCountryCode} className="country-code-select">
                   {countryCodes.map((countryCode, index) => (
                     <option key={index} value={countryCode.code}>
                       {countryCode.code}
