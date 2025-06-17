@@ -53,7 +53,7 @@ function App() {
           minHeight={600}
           title="Screen Size Warning"
           message="I'm working hard to bring this site to life.
-                   For best experience, please use a larger screen (e.g., Laptop/Desktop). Avoid using mobile
+                   For best experience, please use a larger screen (e.g., laptop/desktop). Avoid using mobile
                    devices for now."
         />
         <Header />
