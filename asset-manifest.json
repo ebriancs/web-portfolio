@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/web-portfolio/static/css/main.59beb22a.css",
-    "main.js": "/web-portfolio/static/js/main.a85497e8.js",
+    "main.css": "/web-portfolio/static/css/main.1b5c9295.css",
+    "main.js": "/web-portfolio/static/js/main.457c559d.js",
     "static/js/453.d855a71b.chunk.js": "/web-portfolio/static/js/453.d855a71b.chunk.js",
     "static/media/img1.jpg": "/web-portfolio/static/media/img1.27095927835544b2d28b.jpg",
     "static/media/img2.jpg": "/web-portfolio/static/media/img2.e8a306e225470ecd6bf4.jpg",
@@ -10,17 +10,10 @@
     "static/media/bg2.png": "/web-portfolio/static/media/bg2.f0dd5e5a9f55c3564191.png",
     "static/media/bg4.png": "/web-portfolio/static/media/bg4.caeb7d3f6257e686efcf.png",
     "static/media/bg.png": "/web-portfolio/static/media/bg.34b3aa0fcfae406ed0cc.png",
-    "static/media/img8.jpg": "/web-portfolio/static/media/img8.fc45f4cdf2efff5766cc.jpg",
     "static/media/img5.jpg": "/web-portfolio/static/media/img5.41736ca621295e328d6d.jpg",
-    "static/media/img12.jpg": "/web-portfolio/static/media/img12.b63fa54038e562359ef5.jpg",
-    "static/media/img13.jpg": "/web-portfolio/static/media/img13.8c6b1988ae667e0748ad.jpg",
-    "static/media/img4.jpg": "/web-portfolio/static/media/img4.b1fba60cec4494024bbd.jpg",
-    "static/media/img7.jpg": "/web-portfolio/static/media/img7.0cbf51c98693dc0a425b.jpg",
-    "static/media/img6.jpg": "/web-portfolio/static/media/img6.797f1220334c6ccff974.jpg",
-    "static/media/img11.jpg": "/web-portfolio/static/media/img11.6547076bbdbd9ef9ab29.jpg",
-    "static/media/img9.jpg": "/web-portfolio/static/media/img9.4739022c326ddd4fa1e9.jpg",
-    "static/media/img10.jpg": "/web-portfolio/static/media/img10.ad60682224d365a0335d.jpg",
     "static/media/the_great_hackathon.jpg": "/web-portfolio/static/media/the_great_hackathon.dc847e2051407389edb0.jpg",
+    "static/media/img6.jpg": "/web-portfolio/static/media/img6.797f1220334c6ccff974.jpg",
+    "static/media/img4.jpg": "/web-portfolio/static/media/img4.b1fba60cec4494024bbd.jpg",
     "static/media/fa-solid-900.ttf": "/web-portfolio/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
     "static/media/alcala.png": "/web-portfolio/static/media/alcala.1a36cf7babf15a8b3959.png",
     "static/media/react.png": "/web-portfolio/static/media/react.1cc970c739d3965cc1d6.png",
@@ -51,12 +44,12 @@
     "static/media/fa-v4compatibility.ttf": "/web-portfolio/static/media/fa-v4compatibility.0f6cb412603527bda691.ttf",
     "static/media/fa-v4compatibility.woff2": "/web-portfolio/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
     "index.html": "/web-portfolio/index.html",
-    "main.59beb22a.css.map": "/web-portfolio/static/css/main.59beb22a.css.map",
-    "main.a85497e8.js.map": "/web-portfolio/static/js/main.a85497e8.js.map",
+    "main.1b5c9295.css.map": "/web-portfolio/static/css/main.1b5c9295.css.map",
+    "main.457c559d.js.map": "/web-portfolio/static/js/main.457c559d.js.map",
     "453.d855a71b.chunk.js.map": "/web-portfolio/static/js/453.d855a71b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.59beb22a.css",
-    "static/js/main.a85497e8.js"
+    "static/css/main.1b5c9295.css",
+    "static/js/main.457c559d.js"
   ]
 }
