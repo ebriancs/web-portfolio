@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import Project from './components/Project';
 import Certificate from './components/Certificate';
 import Career from './components/Career';
-import Personal from './components/Personal';
+//import Personal from './components/Personal';
 import Contact from './components/Contact';
 import Intro from './components/Intro';
 import Skill from './components/Skill';
@@ -13,8 +13,6 @@ import { Warning, ScreenWarning } from './components/Modal';
 import { getDeviceInfo } from './utils/getDeviceInfo';
 import { sendDeviceEmail } from './utils/sendDeviceEmail';
 import './App.scss';
-
-const REACT_APP_DEBUG = process.env.REACT_APP_DEBUG;
 
 function App() {
   useEffect(() => {
@@ -26,8 +24,7 @@ function App() {
         return;
       }
 
-      console.log(REACT_APP_DEBUG);
-      if (!REACT_APP_DEBUG) {
+      if (process.env.REACT_APP_DEBUG !== 'true') {
         sendDeviceEmail(deviceInfo)
           .then((response) => console.log('sendDeviceEmail response:', response))
           .catch((err) => console.error('sendDeviceEmail ERROR:', err));
