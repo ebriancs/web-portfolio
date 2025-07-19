@@ -14,6 +14,8 @@ import { getDeviceInfo } from './utils/getDeviceInfo';
 import { sendDeviceEmail } from './utils/sendDeviceEmail';
 import './App.scss';
 
+const REACT_APP_DEBUG = process.env.REACT_APP_DEBUG;
+
 function App() {
   useEffect(() => {
     const fetchDeviceInfo = async () => {
@@ -24,9 +26,11 @@ function App() {
         return;
       }
 
-      sendDeviceEmail(deviceInfo)
-        .then((response) => console.log('sendDeviceEmail response:', response))
-        .catch((err) => console.error('sendDeviceEmail ERROR:', err));
+      if (!REACT_APP_DEBUG) {
+        sendDeviceEmail(deviceInfo)
+          .then((response) => console.log('sendDeviceEmail response:', response))
+          .catch((err) => console.error('sendDeviceEmail ERROR:', err));
+      }
     };
 
     fetchDeviceInfo();
