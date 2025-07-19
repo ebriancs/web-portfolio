@@ -26,6 +26,7 @@ function App() {
         return;
       }
 
+      console.log(REACT_APP_DEBUG);
       if (!REACT_APP_DEBUG) {
         sendDeviceEmail(deviceInfo)
           .then((response) => console.log('sendDeviceEmail response:', response))
