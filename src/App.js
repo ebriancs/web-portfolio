@@ -24,11 +24,9 @@ function App() {
         return;
       }
 
-      /*
       sendDeviceEmail(deviceInfo)
         .then((response) => console.log('sendDeviceEmail response:', response))
         .catch((err) => console.error('sendDeviceEmail ERROR:', err));
-      */
     };
 
     fetchDeviceInfo();
