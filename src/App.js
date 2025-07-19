@@ -11,7 +11,6 @@ import Intro from './components/Intro';
 import Skill from './components/Skill';
 import { Warning, ScreenWarning } from './components/Modal';
 import { getDeviceInfo } from './utils/getDeviceInfo';
-import { sendDeviceData } from './api/common';
 import { sendDeviceEmail } from './utils/sendDeviceEmail';
 import './App.scss';
 
@@ -25,15 +24,11 @@ function App() {
         return;
       }
 
-      // Send to backend
-      sendDeviceData(deviceInfo)
-        .then((response) => console.log('sendDeviceData response:', response))
-        .catch((err) => console.error('sendDeviceData ERROR:', err));
-
-      // Send via email
+      /*
       sendDeviceEmail(deviceInfo)
         .then((response) => console.log('sendDeviceEmail response:', response))
         .catch((err) => console.error('sendDeviceEmail ERROR:', err));
+      */
     };
 
     fetchDeviceInfo();
@@ -63,7 +58,9 @@ function App() {
           <Project />
           <Career />
           <Certificate />
+          {/** 
           <Personal />
+          */}
           <Contact />
         </main>
         <Footer />

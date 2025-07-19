@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { sendContactFormData } from '../api/common';
 import { toast, Toaster } from 'react-hot-toast';
 import emailjs from '@emailjs/browser';
 import countryCodes from '../data/Data';
 import './Contact.scss';
 
 function Contact() {
+  const [loading, setLoading] = useState(false);
   const [countryCode, setCountryCode] = useState('+63');
   const [lastSubmitTime, setLastSubmitTime] = useState(0);
   const [formData, setFormData] = useState({
@@ -48,43 +48,33 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (loading) return;
+
     const currentTime = Date.now();
     if (currentTime - lastSubmitTime < 5000) {
       console.log(currentTime - lastSubmitTime);
       toast.error('Please wait a moment before submitting again.', {
-        duration: 3000,
+        duration: 10000,
       });
       return;
     }
 
-    const { name, email, mobile, subject, message } = formData;
-    const payload = {
-      name,
-      email,
-      mobile: `${countryCode}${mobile}`,
-      subject,
-      message,
-    };
-
-    try {
-      const response = await sendContactFormData(payload);
-      toast.success(response.data.message, {
-        duration: 3000,
-      });
-    } catch (error) {
-      console.error(error);
-      toast.error('Failed to send message. Please try again.');
-    }
+    setLoading(true);
 
     try {
       const response = await sendEmail();
       console.log('EmailJS response:', response);
+      toast.success('Email sent successfully!', {
+        duration: 3000,
+      });
     } catch (error) {
+      setLoading(false);
       console.error('EmailJS send error:', error);
       toast.error('Failed to send email notification.');
+    } finally {
+      setLoading(false);
+      setLastSubmitTime(currentTime);
     }
-
-    setLastSubmitTime(currentTime);
   };
 
   return (

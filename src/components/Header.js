@@ -1,6 +1,6 @@
-import React from "react";
-import "./Header.scss";
-import { Link } from "react-scroll";
+import React from 'react';
+import './Header.scss';
+import { Link } from 'react-scroll';
 
 function Header() {
   const scrollOffset = -100;
@@ -18,45 +18,26 @@ function Header() {
       <nav className="right">
         <ul>
           <li>
-            <Link
-              to="skill"
-              smooth={scrollSmooth}
-              offset={scrollOffset}
-              duration={scrollDuration}
-            >
+            <Link to="skill" smooth={scrollSmooth} offset={scrollOffset} duration={scrollDuration}>
               Skills
             </Link>
           </li>
           <li>
-            <Link
-              to="project"
-              smooth={scrollSmooth}
-              offset={scrollOffset}
-              duration={scrollDuration}
-            >
+            <Link to="project" smooth={scrollSmooth} offset={scrollOffset} duration={scrollDuration}>
               Projects
             </Link>
           </li>
           <li>
-            <Link
-              to="career"
-              smooth={scrollSmooth}
-              offset={scrollOffset}
-              duration={scrollDuration}
-            >
+            <Link to="career" smooth={scrollSmooth} offset={scrollOffset} duration={scrollDuration}>
               Career
             </Link>
           </li>
           <li>
-            <Link
-              to="certificate"
-              smooth={scrollSmooth}
-              offset={scrollOffset}
-              duration={scrollDuration}
-            >
+            <Link to="certificate" smooth={scrollSmooth} offset={scrollOffset} duration={scrollDuration}>
               Certificates
             </Link>
           </li>
+          {/**
           <li>
             <Link
               to="personal"
@@ -67,13 +48,9 @@ function Header() {
               Personal
             </Link>
           </li>
+           */}
           <li>
-            <Link
-              to="contact"
-              smooth={scrollSmooth}
-              offset={scrollOffset}
-              duration={scrollDuration}
-            >
+            <Link to="contact" smooth={scrollSmooth} offset={scrollOffset} duration={scrollDuration}>
               Contact
             </Link>
           </li>

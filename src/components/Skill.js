@@ -4,7 +4,6 @@ import htmlImg from "../assets/skills/html.png";
 import cssImg from "../assets/skills/css.png";
 import pyImg from "../assets/skills/python.png";
 import jsImg from "../assets/skills/javascript.png";
-import phpImg from "../assets/skills/php.png";
 import djangoImg from "../assets/skills/django.png";
 import reactImg from "../assets/skills/react.png";
 import vueImg from "../assets/skills/vue.png";
@@ -19,7 +18,6 @@ const skills = [
   { name: "CSS", percentage: 80, img: cssImg },
   { name: "Python", percentage: 90, img: pyImg },
   { name: "JavaScript", percentage: 70, img: jsImg },
-  { name: "PHP", percentage: 50, img: phpImg },
   { name: "Django", percentage: 80, img: djangoImg },
   { name: "React.js", percentage: 50, img: reactImg },
   { name: "Vue.js", percentage: 50, img: vueImg },
